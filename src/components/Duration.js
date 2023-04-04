@@ -1,4 +1,3 @@
-import React, { useState } from "react"
 import Slider from "./Slider"
 
 function Duration ({ duration, setDuration }) {
