@@ -3,14 +3,14 @@ import Slider from "./Slider"
 
 function Duration ({ duration, setDuration }) {
     const range = {min:1, max: 12, step:1,}
-    const [currentValue, setCurrentValue] = useState(duration)
+    //const [currentValue, setCurrentValue] = useState(duration)
 
     return (
         <div className="p-7 pb-16 text-gray-500">
             <div className="mb-8">
                 <p className="text-3xl text-[#053F63]">{duration}</p>
                 <span className="text-lg ">
-                    {duration == 1 ? "week" : "weeks"}
+                    {duration === 1 ? "week" : "weeks"}
                 </span>
             </div>
             <div>

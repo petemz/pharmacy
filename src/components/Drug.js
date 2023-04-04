@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react"
+import { useState, } from "react"
 import Dosage from "./Dosage"
 import Duration from "./Duration"
 import Frequency from "./Frequency"
@@ -58,7 +58,7 @@ function Drug ({drug}) {
                         <div onClick={() => handleComponentSelection('Duration')} className="flex justify-between py-1 mb-6 cursor-pointer">
                             <p>Duration</p>
                             <p className="text-blue-500">
-                                {`${duration} ${duration == 1 ? "week" : "weeks"}`}
+                                {`${duration} ${duration === 1 ? "week" : "weeks"}`}
                             </p>
                         </div>
 

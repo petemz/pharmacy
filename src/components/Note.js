@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 function Notes ({ note, setNote }) {
     return (
         <div className=" w-full bottom-0 rounded-t-3xl bg-white p-7 pb-16 text-gray-500">
