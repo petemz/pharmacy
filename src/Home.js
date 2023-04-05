@@ -39,7 +39,7 @@ function Page ({ drugs }) {
         : drugs.filter(drug => selectedCategories.includes(drug.category));
 
     return(
-        <div className='px-2'>
+        <div className='px-2 max-w-xl'>
             <div className="flex text-[#425b84] text-sm mb-7 overflow-x-scroll scrollbar-hide">
                 {categories.map((category, index) => (
                 <button
