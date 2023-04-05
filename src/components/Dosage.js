@@ -4,7 +4,7 @@ import Slider from "./Slider"
 
 function Dosage ({ unit, setUnit, val, setVal }) {
     const range = {min:100, max: 900, step:100}
-    const [currentValue, setCurrentValue] = useState(val)
+    const currentValue = useState(val)
     //const [dispUnit, setUnit] = useState("mg")
     const dispUnit = unit
 

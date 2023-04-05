@@ -8,6 +8,7 @@ function Page ({ drugs }) {
 
     const breakpoints ={
         default:3,
+        
         700:2
     }
     

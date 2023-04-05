@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Frequency ({ freq, setFreq, period, setPeriod }) {
     const times = ["Daily", "2 days", "3 days", "Weekly", "2 weeks", "Monthly"]
