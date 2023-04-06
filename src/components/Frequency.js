@@ -1,6 +1,6 @@
 import React from "react";
 
-function Frequency ({ freq, setFreq, period, setPeriod }) {
+function Frequency ({ freq, setFreq, period, setPeriod, closeTab }) {
     const times = ["Daily", "2 days", "3 days", "Weekly", "2 weeks", "Monthly"]
 
     //const [freq, setFreq] = useState("1 time");
@@ -33,7 +33,7 @@ function Frequency ({ freq, setFreq, period, setPeriod }) {
     })
 
     return(
-        <div className=" p-7 pb-16 text-gray-500">
+        <div className="p-7 pb-14 text-gray-500">
             <div className="mb-8">
                 <p className="text-3xl text-[#053F63]">{freq}</p>
                 <span className="text-lg ">{period}</span>
@@ -54,6 +54,13 @@ function Frequency ({ freq, setFreq, period, setPeriod }) {
                     {timesInput}
                 </div>
             </div>
+
+            <button 
+                className="bg-blue-500 rounded-xl text-white mt-8 px-8 h-14 flex m-auto justify-center items-center text-xl font-semibold"
+                onClick={closeTab}    
+            >
+                <span>DONE</span>
+            </button>
         </div>
     )
 }

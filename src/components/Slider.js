@@ -11,7 +11,11 @@ function Slider({ range, step, val,  setVal } ) {
   return (
     <div>
         <div className={"slider mb-1"}>
-            <input type="range" min={range.min} max={range.max} step={range.step} value={currentValue} onChange={handleChange} />
+            <input 
+              type="range" min={range.min} max={range.max} step={range.step} 
+              value={currentValue} 
+              onChange={handleChange} 
+            />
         </div>
     </div>
   );

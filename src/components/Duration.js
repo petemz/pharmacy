@@ -1,11 +1,11 @@
 import Slider from "./Slider"
 
-function Duration ({ duration, setDuration }) {
+function Duration ({ duration, setDuration, closeTab }) {
     const range = {min:1, max: 12, step:1,}
     //const [currentValue, setCurrentValue] = useState(duration)
 
     return (
-        <div className="p-7 pb-16 text-gray-500">
+        <div className="p-7 pb-14 text-gray-500">
             <div className="mb-8">
                 <p className="text-3xl text-[#053F63]">{duration}</p>
                 <span className="text-lg ">
@@ -20,6 +20,13 @@ function Duration ({ duration, setDuration }) {
                     <span>{range.max + "weeks"}</span>
                 </div>
             </div>
+
+            <button 
+                className="bg-blue-500 rounded-xl text-white mt-8 px-8 h-14 flex m-auto justify-center items-center text-xl font-semibold"
+                onClick={closeTab}    
+            >
+                <span>DONE</span>
+            </button>
         </div>
     )
 }

@@ -8,7 +8,7 @@ function App() {
 
   return (
     <Router>
-      <div className='App h-full overflow-scroll scrollbar-hide'>
+      <div className='App h-full overflow-scroll scrollbar-hide flex justify-center m-auto'>
 
         <div className='content'>
           <Switch>
