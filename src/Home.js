@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import Masonry from 'react-masonry-css';
+import SearchBar from './components/SearchBar';
 
 import { Link, useHistory } from 'react-router-dom';
 
 function Page ({ drugs }) {
     const navigate = useHistory();
+    const [overlay, setOverlay] = useState(true);
 
     const breakpoints ={
         default:3,
@@ -36,16 +38,25 @@ function Page ({ drugs }) {
         ? drugs
         : drugs.filter(drug => selectedCategories.includes(drug.category));
 
+    const [keyword, setKeyword] = useState('');
+    const updateKeyword = (keyword) => {
+        const filtered = filteredDrugs.filter(temp => {
+        return `${temp.name.toLowerCase()}`.includes(keyword.toLowerCase());
+        })
+        setKeyword(keyword);
+        //setRenderedTemplates(filtered);
+    }
+
     return(
-        <div className='py-6 max-sm:w-[410px] w-[610px] shadow-lg'>
+        <div className='border py-6 max-sm:w-[410px] w-[610px] h-max shadow-lg relative'>
+            <div>
             <div>
                 <div className="px-4 mb-5 flex">
-                    <textarea 
-                        className="w-full focus:outline-none bg-gray-100 h-14 resize-none p-4 pl-8 rounded-xl" name="notes" id="notes" placeholder="Search Product"
-                        onChange={e => (e.target.value)}  
-                    >
-                        
-                    </textarea>
+
+                    <div className='w-full'>
+                        <SearchBar keyword={keyword} onChange={updateKeyword}/>
+                    </div>
+                    
 
                     <div className='p-4 ml-6 rounded-xl bg-[#E7F1FF]'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="27.75" height="22.5" viewBox="0 0 27.75 22.5">
@@ -69,6 +80,7 @@ function Page ({ drugs }) {
                 </div>
             </div>    
 
+            
         
 
             <Masonry
@@ -99,6 +111,16 @@ function Page ({ drugs }) {
                     })
                 }
             </Masonry>
+            </div>
+            
+            <div className="">
+                {/*overlay && 
+                    //classes "max-sm:w-[410px] w-[610px]" because of overflow on the right side. Note- it only overflows on absolute"
+                    <div className="max-sm:w-[410px] w-[610px] h-64 top-0 absolute z-50 rounded-t-3xl bg-white">
+                        <p>ppppppppppp</p>
+                    </div>
+            */}
+            </div>
         </div>
     )
 }

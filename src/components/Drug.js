@@ -30,7 +30,7 @@ function Drug ({drug}) {
     const [note, setNote] = useState("")
 
     return (
-        <div className="text-[#053F63] max-sm:w-[410px] w-[610px] shadow-lg   pb-7 text-sm ">
+        <div className="text-[#053F63] border relative max-sm:w-[410px] w-[610px] shadow-xl pb-7 text-sm ">
             <div>
                 <div style={{ backgroundColor: drug.color }} className={` h-64 flex justify-center items-center`}>
                     {drug.img.lg}
@@ -83,7 +83,7 @@ function Drug ({drug}) {
                 </div>
 
                 {overlay &&
-                    <div className="max-sm:w-[410px] w-[610px] absolute z-8 top-0 h-full opacity-50 bg-black"></div>
+                    <div className="max-sm:w-[410px] w-full absolute z-8 top-0 h-full opacity-50 bg-black"></div>
                 }
             </div>
 
@@ -96,25 +96,25 @@ function Drug ({drug}) {
             <div className="fixed">
                 {selectedComponent === "Dosage" && 
                     //classes "max-sm:w-[410px] w-[610px]" because of overflow on the right side. Note- it only overflows on absolute"
-                    <div className="max-sm:w-[410px] w-[610px] h-max bottom-0 absolute z-50 rounded-t-3xl bg-white">
+                    <div className="max-sm:w-[410px] w-[608px] h-max bottom-0 absolute z-50 rounded-t-3xl bg-white">
                         <Dosage val={val} setVal={setVal} unit={unit} setUnit={setUnit} closeTab={closeTab}/>
                     </div>
                 }
 
                 {selectedComponent === "Duration" && 
-                    <div className="max-sm:w-[410px] w-[610px] h-max bottom-0 absolute z-50 rounded-t-3xl bg-white">
+                    <div className="max-sm:w-[410px] w-[608px] h-max bottom-0 absolute z-50 rounded-t-3xl bg-white">
                         <Duration duration={duration} setDuration={setDuration} closeTab={closeTab}/>
                     </div>
                 }
 
                 {selectedComponent === "Frequency" && 
-                    <div className="max-sm:w-[410px] w-[610px] h-max bottom-0 absolute z-50 rounded-t-3xl bg-white">
+                    <div className="max-sm:w-[410px] w-[608px] h-max bottom-0 absolute z-50 rounded-t-3xl bg-white">
                         <Frequency freq={freq} setFreq={setFreq} period={period} setPeriod={setPeriod} closeTab={closeTab}/>
                     </div>
                 }
 
                 {selectedComponent === "Note" && 
-                    <div className="max-sm:w-[410px] w-[610px] h-max bottom-0 absolute z-50 rounded-t-3xl bg-white">
+                    <div className="max-sm:w-[410px] w-[608px] h-max bottom-0 absolute z-50 rounded-t-3xl bg-white">
                         <Note note={note} setNote={setNote} closeTab={closeTab}/>
                     </div>
                 } 

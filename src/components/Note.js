@@ -1,6 +1,6 @@
 function Notes ({ note, setNote, closeTab }) {
     return (
-        <div className="p-7 pb-14 text-gray-500">
+        <div className="p-7 pb-28 text-gray-500">
             <div className="mb-8">
                 <p className="text-3xl text-[#053F63]">Notes</p>
                 <span className="text-lg ">Enter a prescription note</span>
