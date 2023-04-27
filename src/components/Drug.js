@@ -30,7 +30,7 @@ function Drug ({drug}) {
     const [note, setNote] = useState("")
 
     return (
-        <div className="text-[#053F63] max-sm:w-[410px] w-[610px] shadow-lg   pb-7 text-sm ">
+        <div className="text-[#053F63] relative max-sm:w-[410px] w-[610px] shadow-lg pb-7 text-sm ">
             <div>
                 <div style={{ backgroundColor: drug.color }} className={` h-64 flex justify-center items-center`}>
                     {drug.img.lg}
@@ -83,7 +83,7 @@ function Drug ({drug}) {
                 </div>
 
                 {overlay &&
-                    <div className="max-sm:w-[410px] w-[610px] absolute z-8 top-0 h-full opacity-50 bg-black"></div>
+                    <div className="max-sm:w-[410px] w-full absolute z-8 top-0 h-full opacity-50 bg-black"></div>
                 }
             </div>
 

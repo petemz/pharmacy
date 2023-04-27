@@ -49,12 +49,12 @@ function Dosage ({ unit, setUnit, val, setVal, closeTab }) {
             </div>
 
 
-                <button 
-                    className="bg-blue-500 rounded-xl text-white mt-8 px-8 h-14 flex m-auto justify-center items-center text-xl font-semibold"
-                    onClick={closeTab}    
-                >
-                    <span>DONE</span>
-                </button>
+            <button 
+                className="bg-blue-500 rounded-xl text-white mt-8 px-8 h-14 flex m-auto justify-center items-center text-xl font-semibold"
+                onClick={closeTab}    
+            >
+                <span>DONE</span>
+            </button>
         </div>
     )
 } 
