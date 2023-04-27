@@ -48,7 +48,7 @@ function Page ({ drugs }) {
     }
 
     return(
-        <div className='py-6 max-sm:w-[410px] w-[610px] h-max shadow-lg relative'>
+        <div className='border py-6 max-sm:w-[410px] w-[610px] h-max shadow-lg relative'>
             <div>
             <div>
                 <div className="px-4 mb-5 flex">
