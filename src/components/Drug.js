@@ -5,21 +5,25 @@ import Frequency from "./Frequency"
 import Note from "./Note"
 
 function Drug ({drug}) {
-    const [selectedComponent, setSelectedComponent] = useState('');
-    const [overlay, setOverlay] = useState(false);
+    const [selectedComponent, setSelectedComponent] = useState('')
+    const [overlay, setOverlay] = useState(false)
     const [alert, setAlert] = useState(false)
 
     const handleTabSelection = (componentName) => {
-        setSelectedComponent(componentName);
+        setSelectedComponent(componentName)
         setOverlay(true)
-    };
+    }
     const closeTab = () => {
         setSelectedComponent('')
         setOverlay(false)
-    };
+    }
     const handlePrescribe = () => {
         setAlert(true)
         setOverlay(true)
+        setTimeout(() => {
+            setAlert(false)
+            setOverlay(false)
+        }, 1500)
     }
 
     const [val, setVal] = useState(0)

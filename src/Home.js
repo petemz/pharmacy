@@ -6,7 +6,6 @@ import { Link, useHistory } from 'react-router-dom';
 
 function Page ({ drugs }) {
     const navigate = useHistory();
-    //const [overlay, setOverlay] = useState(true);
 
     const breakpoints ={
         default:3,
@@ -40,11 +39,7 @@ function Page ({ drugs }) {
 
     const [keyword, setKeyword] = useState('');
     const updateKeyword = (keyword) => {
-        //const filtered = filteredDrugs.filter(temp => {
-        //return `${temp.name.toLowerCase()}`.includes(keyword.toLowerCase());
-        //})
         setKeyword(keyword);
-        //setRenderedTemplates(filtered);
     }
 
     return(
