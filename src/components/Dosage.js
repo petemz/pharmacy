@@ -1,11 +1,9 @@
 import { useState } from "react"
 import Slider from "./Slider"
 
-
 function Dosage ({ unit, setUnit, val, setVal, closeTab }) {
     const range = {min:100, max: 900, step:100}
     const currentValue = useState(val)
-    //const [dispUnit, setUnit] = useState("mg")
     const dispUnit = unit
 
     const units = ["kg", "g", "mg", "mcg", "L", "ml", "cc", "mol", "Mmol",]
@@ -14,15 +12,15 @@ function Dosage ({ unit, setUnit, val, setVal, closeTab }) {
         return (
             <label key={unit} htmlFor={unit}>
                 {/* connected two ternary statements to display mg as the default */}
-                <input  type="radio" value={unit}  
-                        checked={unit === "mg" ?    dispUnit === "mg" ? true : false 
-                                               :    unit === dispUnit}
-                        onChange={() => setUnit(unit)}/>
+                <input  
+                    type="radio" value={unit}  
+                    checked={unit === "mg" ?    dispUnit === "mg" ? true : false    :    unit === dispUnit}
+                    onChange={() => setUnit(unit)}
+                />
                 <span>{unit}</span>
             </label>
         )
     })
-    
 
     return (
         <div className="p-7 pb-14 text-gray-500">
@@ -47,7 +45,6 @@ function Dosage ({ unit, setUnit, val, setVal, closeTab }) {
                     {unitInput}
                 </div>           
             </div>
-
 
             <button 
                 className="mb-16 bg-blue-500 rounded-xl text-white mt-8 px-8 h-14 flex m-auto justify-center items-center text-xl font-semibold"

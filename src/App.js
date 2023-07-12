@@ -9,7 +9,6 @@ function App() {
   return (
     <Router>
       <div className='App h-full relative max-sm:w-[410px] w-max overflow-scroll scrollbar-hide sm flex justify-center m-auto'>
-
         <div className='content'>
           <Switch>
             <Route exact path="/">
